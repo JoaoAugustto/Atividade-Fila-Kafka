@@ -1,20 +1,31 @@
-# Exemplo de fila KAFKA
+### Kafka ### 
 
-### Dependências: Docker
+### Pré-requisitos ###
 
-### Como instalar?
+Docker instalado
 
-Baixe o código deste repositório, abra o terminal e rode o comando "docker-compose up"
+Como instalar?
 
-### Funcionamento:
+Baixe o código do repositório.
+Abra o terminal no diretório onde o código foi baixado.
 
-O producer ficará disponível na porta 8080 do seu computador com a rota "produce" "http://localhost:8080/produce"
+## Execute o comando: ##
 
-Envie a seguinte requisição
-``` 
+Copiar código
+ ``` "docker-compose up" ```
+ 
+### Como usar? ###
+
+O produtor (producer) estará disponível na porta 8080 do seu computador, acessível pela rota /produce em http://localhost:8080/produce.
+
+Para enviar uma mensagem, faça uma requisição POST para essa rota com o seguinte formato:
+
+json
+Copiar código
+```
 {
-  "message": "Sua mensagem" 
+  "message": "Sua mensagem"
 }
 ```
-
-O log do consumer estará disponível no seu terminal
+Visualização do Log
+Os logs do consumidor (consumer) estarão disponíveis diretamente no terminal onde o comando docker-compose up foi executado.
